@@ -348,9 +348,21 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=https://github.com/blinkfox/hexo-theme-matery" class="tooltipped" data-tooltip="QQ联系我: https://github.com/blinkfox/hexo-theme-matery" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
 
 
 
+    <a href="http://weibo.com/u/2323668352" data-tooltip="关注我的微博: http://weibo.com/u/2323668352" data-position="top" data-delay="50">
+        <i class="fa fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://github.com/blinkfox/hexo-theme-matery" data-tooltip="关注我的知乎: https://github.com/blinkfox/hexo-theme-matery" data-position="top" data-delay="50">
+        <i class="fa fa-inverse">知</i>
+    </a>
 
 
 
@@ -430,6 +442,41 @@ $(function () {
 </div>
                     
 
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"倒数","artist":"邓紫棋","url":"/medias/music/daoshu.mp3","cover":"http://xxx.com/music-cover1.png"},{"name":"来自天堂的魔鬼","artist":"邓紫棋","url":"/medias/music/tiantangdemogui.mp3","cover":"http://xxx.com/music-cover1.png"}]')
+    });
+});
+</script>
                     
 
                     
@@ -560,7 +607,7 @@ $(function () {
                 var now = new Date();
 
                 function createtime() {
-                    var grt = new Date("06/28/2019 00:00:00");
+                    var grt = new Date("09/14/2019 00:00:00");
                     now.setTime(now.getTime() + 250);
                     days = (now - grt) / 1000 / 60 / 60 / 24;
                     dnum = Math.floor(days);
@@ -596,9 +643,21 @@ $(function () {
 
 
 
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=https://github.com/blinkfox/hexo-theme-matery" class="tooltipped" data-tooltip="QQ联系我: https://github.com/blinkfox/hexo-theme-matery" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
 
 
 
+    <a href="http://weibo.com/u/2323668352" data-tooltip="关注我的微博: http://weibo.com/u/2323668352" data-position="top" data-delay="50">
+        <i class="fa fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://github.com/blinkfox/hexo-theme-matery" data-tooltip="关注我的知乎: https://github.com/blinkfox/hexo-theme-matery" data-position="top" data-delay="50">
+        <i class="fa fa-inverse">知</i>
+    </a>
 
 
 
