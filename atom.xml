@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>the blog of ncao</title>
+  
+  <subtitle>knowledge is power</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://isspncao.github.io/"/>
+  <updated>2019-09-14T04:46:34.482Z</updated>
+  <id>http://isspncao.github.io/</id>
+  
+  <author>
+    <name>ncao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello,this is the my first blog</title>
+    <link href="http://isspncao.github.io/2019/09/14/hello-this-is-the-my-first-blog/"/>
+    <id>http://isspncao.github.io/2019/09/14/hello-this-is-the-my-first-blog/</id>
+    <published>2019-09-14T04:46:34.000Z</published>
+    <updated>2019-09-14T04:46:34.482Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://isspncao.github.io/2019/09/14/hello-world/"/>
+    <id>http://isspncao.github.io/2019/09/14/hello-world/</id>
+    <published>2019-09-14T04:28:21.729Z</published>
+    <updated>2019-09-14T04:28:21.729Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
