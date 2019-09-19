@@ -5,7 +5,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Hello World, the blog of ncao">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="description" content="Siesta安装按道理说，对于一个计算程序的安装看说明书即可。不过简单写一下，可以节省很多时间。新版的安装很容易，lapack，blas以及scalapack都是自带的，编译一下即可，所以省却很多设置的麻烦。
+1、首先下载：
+wget ht">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -389,7 +391,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-14
+                    2019-09-19
                 </div>
 
                 
@@ -405,19 +407,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h3 id="Siesta安装"><a href="#Siesta安装" class="headerlink" title="Siesta安装"></a>Siesta安装</h3><p>按道理说，对于一个计算程序的安装看说明书即可。不过简单写一下，可以节省很多时间。新版的安装很容易，lapack，blas以及scalapack都是自带的，编译一下即可，所以省却很多设置的麻烦。</p>
+<p>1、首先下载：</p>
+<p>wget <a href="https://launchpad.net/siesta/4.1/4.1-b3/+download/siesta-4.1-b3.tar.gz" target="_blank" rel="noopener">https://launchpad.net/siesta/4.1/4.1-b3/+download/siesta-4.1-b3.tar.gz</a></p>
+<p>2、然后解压缩，</p>
+<p>tar zxvf siesta-4.1-b3.tar.gz</p>
+<p>进入Obj目录。新版本不在Src目录下编译，而是在Obj目录下编译，这样可以保持Src目录的原始状态和干净。运行：</p>
+<p>sh ../Src/obj_setup.sh</p>
+<p>这会把相关的文件和文件夹拷贝到Obj目录下，这里是专门编译的地方。</p>
+<p>3、串行编译：</p>
+<p>在Obj目录下，有gfortran.make文件。</p>
+<p>cp gfortran.make arch.make</p>
+<p>修改其中的一行：</p>
+<p>LIBS = /opt/math_library/lib/liblapack.so /opt/math_library/lib/libblas.so</p>
+<p>make</p>
+<p>当前目录下会产生siesta可执行文件。</p>
+<p>4、并行编译：</p>
+<p>在arch.make文件中修改CC=…和FC=…这两行为你系统中mpicc和mpif90的绝对路径：</p>
+<p>CC = /opt/mvapich2-2.2rc1/bin/mpicc</p>
+<p>FC = /opt/mvapich2-2.2rc1/bin/mpif90</p>
+<p>并紧随其后添加如下两行：</p>
+<p>MPI_INCLUDE=.<br>MPI_INTERFACE=libmpi_f90.a</p>
+<p>修改 LIBS=…行为：</p>
+<p>LIBS = /opt/math_library/lib/libscalapack.so /opt/math_library/lib/liblapack.so /opt/math_library/lib/libblas.so</p>
+<p>在FPPF LAGS = …的后面添加一行：</p>
+<p>FPPFLAGS += -DMPI</p>
+<p>然后make就可以了。</p>
+<p>由于调用的是scalapack和lapack以及blas的动态库，运行siesta程序之前一定确保运行过</p>
+<p>export LD_LIBRARY_PATH=/opt/math_library/lib:$LD_LIBRARY_PATH</p>
+<p>以便能在运行时找得到这些动态库。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -472,7 +490,7 @@
                   property="dct:title" rel="dct:type">
                     《Hello World》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/14/hello-world/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/19/siesta安装/" property="cc:attributionName"
                rel="cc:attributionURL">
                 ncao
             </a> 采用
@@ -512,37 +530,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/14/编程总结/">
+                <a href="/2019/09/19/siesta安装/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="编程学习总结">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">编程学习总结</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ##编程的结构：
-数据类型
-数据的输入和输出
-顺序，选择，循环
-函数 
-数组
-文件的操作  
-        document.querySelectorAll('.github-emoji')
-          .forEach(el 
+                            Siesta安装按道理说，对于一个计算程序的安装看说明书即可。不过简单写一下，可以节省很多时间。新版的安装很容易，lapack，blas以及scalapack都是自带的，编译一下即可，所以省却很多设置的麻烦。
+1、首先下载：
+wget ht
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -551,14 +564,7 @@
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/编程/" target="_blank">
-                        <span class="chip bg-color">编程</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -566,10 +572,10 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/14/hello-world/">
+                <a href="/2019/09/19/hello-world/">
                     <div class="card-image">
                         
                         
@@ -586,7 +592,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-19
                             </span>
                         <span class="publish-author">
                             
@@ -596,7 +602,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -769,10 +774,6 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=https://github.com/blinkfox/hexo-theme-matery" class="tooltipped" data-tooltip="QQ联系我: https://github.com/blinkfox/hexo-theme-matery" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
-    </a>
-
 
 
     <a href="http://weibo.com/u/2323668352" data-tooltip="关注我的微博: http://weibo.com/u/2323668352" data-position="top" data-delay="50">
@@ -780,10 +781,6 @@
     </a>
 
 
-
-    <a href="https://github.com/blinkfox/hexo-theme-matery" data-tooltip="关注我的知乎: https://github.com/blinkfox/hexo-theme-matery" data-position="top" data-delay="50">
-        <i class="fa fa-inverse">知</i>
-    </a>
 
 
 
