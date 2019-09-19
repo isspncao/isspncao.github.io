@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>小诗一首</title>
+      <link href="/2019/09/19/%E5%B0%8F%E8%AF%97%E4%B8%80%E9%A6%96/"/>
+      <url>/2019/09/19/%E5%B0%8F%E8%AF%97%E4%B8%80%E9%A6%96/</url>
+      
+        <content type="html"><![CDATA[<h1 id="塞下曲"><a href="#塞下曲" class="headerlink" title="塞下曲"></a>塞下曲</h1><h2 id="卢纶"><a href="#卢纶" class="headerlink" title="卢纶"></a>卢纶</h2><h2 id="林暗草惊风，将军夜引弓。"><a href="#林暗草惊风，将军夜引弓。" class="headerlink" title="林暗草惊风，将军夜引弓。"></a>林暗草惊风，将军夜引弓。</h2><h2 id="平明寻白羽，没在石棱中。"><a href="#平明寻白羽，没在石棱中。" class="headerlink" title="平明寻白羽，没在石棱中。"></a>平明寻白羽，没在石棱中。</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 文学作品 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编程学习总结</title>
       <link href="/2019/09/14/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
       <url>/2019/09/14/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
       
-        <content type="html"><![CDATA[<p>编程的结构：<br>    数据类型<br>    数据的输入和输出<br>    顺序，选择，循环<br>    函数<br>    数组<br>    文件的操作</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p>##编程的结构：</p><pre><code>数据类型数据的输入和输出顺序，选择，循环函数 数组文件的操作  </code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       

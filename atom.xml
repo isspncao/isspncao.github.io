@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://isspncao.github.io/"/>
-  <updated>2019-09-19T09:14:49.397Z</updated>
+  <updated>2019-09-19T11:24:36.145Z</updated>
   <id>http://isspncao.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>编程学习总结</title>
-    <link href="http://isspncao.github.io/2019/09/14/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    <id>http://isspncao.github.io/2019/09/14/编程学习总结/</id>
-    <published>2019-09-14T08:48:25.000Z</published>
-    <updated>2019-09-19T09:14:49.397Z</updated>
+    <title>小诗一首</title>
+    <link href="http://isspncao.github.io/2019/09/19/%E5%B0%8F%E8%AF%97%E4%B8%80%E9%A6%96/"/>
+    <id>http://isspncao.github.io/2019/09/19/小诗一首/</id>
+    <published>2019-09-19T10:37:03.000Z</published>
+    <updated>2019-09-19T11:24:36.145Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,40 @@
       
         
         
-          &lt;p&gt;编程的结构：&lt;br&gt;    数据类型&lt;br&gt;    数据的输入和输出&lt;br&gt;    顺序，选择，循环&lt;br&gt;    函数&lt;br&gt;    数组&lt;br&gt;    文件的操作&lt;/p&gt;
-&lt;script&gt;
-       
+          &lt;h1 id=&quot;塞下曲&quot;&gt;&lt;a href=&quot;#塞下曲&quot; class=&quot;headerlink&quot; title=&quot;塞下曲&quot;&gt;&lt;/a&gt;塞下曲&lt;/h1&gt;&lt;h2 id=&quot;卢纶&quot;&gt;&lt;a href=&quot;#卢纶&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="文学作品" scheme="http://isspncao.github.io/tags/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编程学习总结</title>
+    <link href="http://isspncao.github.io/2019/09/14/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>http://isspncao.github.io/2019/09/14/编程学习总结/</id>
+    <published>2019-09-14T08:48:25.000Z</published>
+    <updated>2019-09-19T11:23:08.003Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##编程的结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;数据类型
+数据的输入和输出
+顺序，选择，循环
+函数 
+数组
+文件的操作  &lt;/code&gt;&lt;/pre&gt;&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+  
         
       
     
