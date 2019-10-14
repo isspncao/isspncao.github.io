@@ -4,10 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, the blog of ncao">
-    <meta name="description" content="Siesta安装按道理说，对于一个计算程序的安装看说明书即可。不过简单写一下，可以节省很多时间。新版的安装很容易，lapack，blas以及scalapack都是自带的，编译一下即可，所以省却很多设置的麻烦。
-1、首先下载：
-wget ht">
+    <meta name="keywords" content="两种想法, the blog of ncao">
+    <meta name="description" content="素质拓展的收货:人要给自己设定目标,而且还要给自己的目标设定期限。如果不设定目标，不设定期限，自己会做事情不用心，做的事情会很差。
+成为一个优秀的人，不仅要设定目标，还要注意细节决定成败
+设定目标就要想办法解决各种问题，其他的理由，借口都没">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@ wget ht">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | the blog of ncao</title>
+    <title>两种想法 | the blog of ncao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +263,13 @@ wget ht">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        两种想法
                     </div>
                 </div>
             </div>
@@ -391,7 +391,7 @@ wget ht">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-19
+                    2019-10-14
                 </div>
 
                 
@@ -407,36 +407,9 @@ wget ht">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Siesta安装"><a href="#Siesta安装" class="headerlink" title="Siesta安装"></a>Siesta安装</h3><p>按道理说，对于一个计算程序的安装看说明书即可。不过简单写一下，可以节省很多时间。新版的安装很容易，lapack，blas以及scalapack都是自带的，编译一下即可，所以省却很多设置的麻烦。</p>
-<p>1、首先下载：</p>
-<p>wget <a href="https://launchpad.net/siesta/4.1/4.1-b3/+download/siesta-4.1-b3.tar.gz" target="_blank" rel="noopener">https://launchpad.net/siesta/4.1/4.1-b3/+download/siesta-4.1-b3.tar.gz</a></p>
-<p>2、然后解压缩，</p>
-<p>tar zxvf siesta-4.1-b3.tar.gz</p>
-<p>进入Obj目录。新版本不在Src目录下编译，而是在Obj目录下编译，这样可以保持Src目录的原始状态和干净。运行：</p>
-<p>sh ../Src/obj_setup.sh</p>
-<p>这会把相关的文件和文件夹拷贝到Obj目录下，这里是专门编译的地方。</p>
-<p>3、串行编译：</p>
-<p>在Obj目录下，有gfortran.make文件。</p>
-<p>cp gfortran.make arch.make</p>
-<p>修改其中的一行：</p>
-<p>LIBS = /opt/math_library/lib/liblapack.so /opt/math_library/lib/libblas.so</p>
-<p>make</p>
-<p>当前目录下会产生siesta可执行文件。</p>
-<p>4、并行编译：</p>
-<p>在arch.make文件中修改CC=…和FC=…这两行为你系统中mpicc和mpif90的绝对路径：</p>
-<p>CC = /opt/mvapich2-2.2rc1/bin/mpicc</p>
-<p>FC = /opt/mvapich2-2.2rc1/bin/mpif90</p>
-<p>并紧随其后添加如下两行：</p>
-<p>MPI_INCLUDE=.<br>MPI_INTERFACE=libmpi_f90.a</p>
-<p>修改 LIBS=…行为：</p>
-<p>LIBS = /opt/math_library/lib/libscalapack.so /opt/math_library/lib/liblapack.so /opt/math_library/lib/libblas.so</p>
-<p>在FPPF LAGS = …的后面添加一行：</p>
-<p>FPPFLAGS += -DMPI</p>
-<p>然后make就可以了。</p>
-<p>由于调用的是scalapack和lapack以及blas的动态库，运行siesta程序之前一定确保运行过</p>
-<p>export LD_LIBRARY_PATH=/opt/math_library/lib:$LD_LIBRARY_PATH</p>
-<p>以便能在运行时找得到这些动态库。</p>
-<script>
+                <h2 id="素质拓展的收货"><a href="#素质拓展的收货" class="headerlink" title="素质拓展的收货:"></a>素质拓展的收货:</h2><pre><code>人要给自己设定目标,而且还要给自己的目标设定期限。如果不设定目标，不设定期限，自己会做事情不用心，做的事情会很差。
+成为一个优秀的人，不仅要设定目标，还要注意细节决定成败
+设定目标就要想办法解决各种问题，其他的理由，借口都没有意义，而是想办法解决问题</code></pre><h2 id="人的心："><a href="#人的心：" class="headerlink" title="人的心："></a>人的心：</h2><pre><code>知人知面不知心，人是个复杂的动物，人与人的关系更是复杂的。所以啊，像玩的游戏一样，当个领导是很复杂的，要处理各种人际关系。很多事情没有那么简单。你对别人善良，别人并不一定是善良的。别人说话是这样，可能心里面并不是这样想的。所以啊，人要小心谨慎的处理人际关系。  </code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -488,9 +461,9 @@ wget ht">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hello World》
+                    《两种想法》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/19/siesta安装/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/14/两种想法/" property="cc:attributionName"
                rel="cc:attributionURL">
                 ncao
             </a> 采用
@@ -530,9 +503,10 @@ wget ht">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/10/14/两种想法/">
                     <div class="card-image">
@@ -552,9 +526,9 @@ wget ht">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -563,6 +537,7 @@ wget ht">
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -573,7 +548,7 @@ wget ht">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/19/hello-world/">
+                <a href="/2019/09/19/siesta安装/">
                     <div class="card-image">
                         
                         
@@ -585,7 +560,9 @@ wget ht">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            Siesta安装按道理说，对于一个计算程序的安装看说明书即可。不过简单写一下，可以节省很多时间。新版的安装很容易，lapack，blas以及scalapack都是自带的，编译一下即可，所以省却很多设置的麻烦。
+1、首先下载：
+wget ht
                         
                     </div>
                     <div class="publish-info">

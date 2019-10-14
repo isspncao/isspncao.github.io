@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>两种想法</title>
+      <link href="/2019/10/14/%E4%B8%A4%E7%A7%8D%E6%83%B3%E6%B3%95/"/>
+      <url>/2019/10/14/%E4%B8%A4%E7%A7%8D%E6%83%B3%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="素质拓展的收货"><a href="#素质拓展的收货" class="headerlink" title="素质拓展的收货:"></a>素质拓展的收货:</h2><pre><code>人要给自己设定目标,而且还要给自己的目标设定期限。如果不设定目标，不设定期限，自己会做事情不用心，做的事情会很差。成为一个优秀的人，不仅要设定目标，还要注意细节决定成败设定目标就要想办法解决各种问题，其他的理由，借口都没有意义，而是想办法解决问题</code></pre><h2 id="人的心："><a href="#人的心：" class="headerlink" title="人的心："></a>人的心：</h2><pre><code>知人知面不知心，人是个复杂的动物，人与人的关系更是复杂的。所以啊，像玩的游戏一样，当个领导是很复杂的，要处理各种人际关系。很多事情没有那么简单。你对别人善良，别人并不一定是善良的。别人说话是这样，可能心里面并不是这样想的。所以啊，人要小心谨慎的处理人际关系。  </code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/09/19/siesta%E5%AE%89%E8%A3%85/"/>
       <url>/2019/09/19/siesta%E5%AE%89%E8%A3%85/</url>
